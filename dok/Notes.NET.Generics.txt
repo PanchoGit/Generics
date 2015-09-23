@@ -1,0 +1,142 @@
+//------------------------------------------------------------------------------------//
+Generics:
+	where, default, metodos
+	new()
+
+class - reference type
+struct - value type
+
+// Non-generic class
+public class Dog
+
+// Generic class
+public class Pile<T>
+
+// Non-generic method
+public void Bark()
+
+// Generic method
+public void Bury<T>(T thing)
+
+<where>
+	http://csharp.2000things.com/2014/02/11/1030-requiring-generic-type-parameters-to-derive-from-a-specified-class/
+	http://csharp.2000things.com/2014/07/29/1148-when-to-use-a-generic-covariant-interface/
+
+	There are times, however, when you’d like to constrain the type in some ways, allowing only certain types.
+		public class PileOf<T> where T : Animal
+		http://csharp.2000things.com/2014/02/11/1030-requiring-generic-type-parameters-to-derive-from-a-specified-class/
+
+	There are times, however, when you’d like to constrain the type in some ways, allowing only types that implement a particular interface.
+		public class PileOf<T> where T : IBark
+		http://csharp.2000things.com/2014/02/12/1031-requiring-generic-type-parameters-to-implement-an-interface/
+
+	To require a type argument to represent a reference type, use the class keyword:
+		public class PileOf<T> where T : class
+	To require a type argument to represent a non-nullable value type, use the struct keyword:
+		public class PileOf<T> where T : struct
+		http://csharp.2000things.com/2014/02/13/1032-requiring-generic-type-parameters-to-be-a-reference-or-value-type/
+
+	You can require that a type passed in as a type argument implement a public parameterless constructor by using the where keyword and specifying new().
+		public class PileOf<T> where T : new()
+		http://csharp.2000things.com/2014/02/14/1033-requiring-a-generic-type-parameter-to-have-a-parameterless-constructor/
+
+<default>
+	The default operator provides a valid default value for any type.
+		default(T)
+		http://csharp.2000things.com/2014/01/20/1014-using-default-operator-in-a-generic-class/
+
+<Generic Method>
+
+A generic type is a type that uses a type parameter in its definition, which must be concretely specified when constructing the type.
+public class PileOf<T>
+{
+    private List<T> thePile;
+ 
+    public PileOf()
+    {
+        thePile = new List<T>();
+    }
+ 
+    public void AddItem(T thing)
+    {
+        thePile.Add(thing);
+    }
+}
+
+A generic method is a method that introduces a generic type parameter.
+static void Swap<T>(ref T item1, ref T item2)
+{
+    T temp = item1;
+    item1 = item2;
+    item2 = temp;
+}
+Methods within generic types that use the type parameter from the type are not consider generic.  The AddItem method in the PileOf<T> class above is not considered generic.  To be considered a generic method, the method must introduce a new type parameter not present as a type parameter in the containing class.
+
+//------------------------------------------------------------------------------------//
+< Example >
+
+public abstract class ConfigurationBase<T> where T : class, new()
+
+public static class LogFactory<T, L> where L : DefaultLog, new()
+
+ 8  	internal class GenericTranslator<I, E> : ITranslator<I, E>
+ 9: 		where I : new()
+10: 		where E : new()
+
+private static T GetPrincipalInstance<T, E, I>(Guid principalID)
+	where T : SecurityPrincipal
+	where E : SecurityPrincipalEntity<E>, new()
+	where I : ITranslator<E, T>, new()
+{
+
+public class MockOpenConcurrencyManager<T> : IConcurrencyManager<T> where T : EntityBase<T>, new ()
+
+internal class GenericTranslator<I, E> : ITranslator<I, E>
+	where I : new()
+	where E : new()
+
+public static List<T> Translate<S, T>( List<S> sourceList, ITranslator translator ) where T : class
+{
+	if( sourceList == null )
+	{
+		return default( List<T> );
+	}
+
+	List<T> targetList = new List<T>();
+
+	foreach( S source in sourceList )
+	{
+		targetList.Add( Translate( source, translator ) as T );
+	}
+
+	return targetList;
+}
+
+public static void RegisterRepositoryService<TFor, TTo>(this Registry registry)
+	where TTo : class, TFor
+	where TFor : class
+{
+	registry.For<TFor>()
+		.Use<TTo>()
+		.Ctor<IRepository>()
+		.Is(ctx => ctx.TheInstanceNamed(APP_IOC_REGISTRY_KEY));
+
+	registry.For<TTo>().Use(ctx => (TTo) ctx.GetInstance<TFor>());
+}
+
+public class SaveDealCommand<TMessageRequest, TMessageResponse, TRequest, TResponse> : CommandBase<TMessageResponse>
+    where TMessageRequest : IDealMessageRequest<TRequest>
+    where TMessageResponse : IDealMessageResponse<TResponse>, new()
+    where TRequest : IDealBody
+    where TResponse : IDealResponse, new()
+
+Con out >
+C:\Pancho\Projects\Invision\DEV\Client\Common\Turner.Traffic.Common.Client\IViewModel.cs
+
+Con 11 Where >
+C:\Pancho\Projects\Invision\DEV\Server\Copy\Invision.Traffic.Copy.Validations\ClusterCommercialCopyInstruction\PropertyRules\DatesRule.cs
+
+Con 26 where >
+C:\Pancho\Projects\Invision\DEV\Server\Copy\Invision.Traffic.Copy.Validations\ClusterCommercialCopyInstruction\PropertyRules\OrderListSelectedAmountRule.cs
+
+//------------------------------------------------------------------------------------//
