@@ -1,7 +1,7 @@
-﻿namespace Generics.model
+﻿namespace Generics.Model
 {
     public interface ISkaterModel : IPersonModel
     {
-        int Stance { get; set; }
+        string Stance { get; set; }
     }
 }

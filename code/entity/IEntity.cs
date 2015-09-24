@@ -1,4 +1,4 @@
-﻿namespace Generics.entity
+﻿namespace Generics.Entity
 {
     public interface IEntity
     {

@@ -1,4 +1,4 @@
-﻿namespace Generics.model
+﻿namespace Generics.Model
 {
     public class PersonModel : IModel, IPersonModel
     {

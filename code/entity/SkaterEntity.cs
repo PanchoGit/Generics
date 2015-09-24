@@ -1,4 +1,4 @@
-﻿namespace Generics.entity
+﻿namespace Generics.Entity
 {
     public class SkaterEntity : IEntity, IPersonEntity
     {
@@ -11,7 +11,7 @@
 
         public string Name { get; set; }
 
-        public int Stance { get; set; }
+        public string Stance { get; set; }
 
         public string Brand { get; set; }
     }

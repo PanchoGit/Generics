@@ -1,10 +1,5 @@
 //------------------------------------------------------------------------------------//
-Generics:
-	where, default, metodos
-	new()
-
-class - reference type
-struct - value type
+1. Generic name definition:
 
 // Non-generic class
 public class Dog
@@ -17,6 +12,33 @@ public void Bark()
 
 // Generic method
 public void Bury<T>(T thing)
+public static void Bury<T>(T thing)
+
+//Static Data Behaves in Generic Types
+PileOf<Dog>.NumInAllPiles
+
+2. where
+
+Generic with 
+	- specific class
+		where T : class
+	- implementing interface
+		where T : IInterface
+	- reference or Value Type
+		where T : class
+		where T : struct
+	- to have a parameterless constructor
+		where T : new()
+
+
+//------------------------------------------------------------------------------------//
+Generics:
+	where, default, metodos
+	new()
+
+class - reference type
+struct - value type
+
 
 <where>
 	http://csharp.2000things.com/2014/02/11/1030-requiring-generic-type-parameters-to-derive-from-a-specified-class/

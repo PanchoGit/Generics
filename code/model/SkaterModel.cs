@@ -1,4 +1,4 @@
-﻿namespace Generics.model
+﻿namespace Generics.Model
 {
     public class SkaterModel : IModel, IPersonModel, ISkaterModel
     {
@@ -6,7 +6,7 @@
 
         public string Name { get; set; }
 
-        public int Stance { get; set; }
+        public string Stance { get; set; }
 
         public string Brand { get; set; }
     }

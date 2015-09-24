@@ -1,26 +1,12 @@
-﻿using Generics.entity;
-using Generics.model;
+﻿using Generics.Model;
 
 namespace Generics
 {
     public class Translator : ITranslator<IPersonModel, ISkaterModel>
     {
-        public TModel Translate<T, TModel>(T entity) where TModel : IEntity, new()
+        public IPersonModel Translate(ISkaterModel model)
         {
-            var model = default(TModel);
-
-            model.Id = 0;
-
-            return model;
-        }
-
-        public IPersonModel TranslateToPerson(ISkaterModel model)
-        {
-            var person = default(IPersonModel); //?????
-
-            person = new PersonModel();
-
-            person.Name = model.Name;
+            var person = new PersonModel { Name = model.Name };
 
             return model;
         }
