@@ -30,7 +30,6 @@ Generic with
 	- to have a parameterless constructor
 		where T : new()
 
-
 //------------------------------------------------------------------------------------//
 Generics:
 	where, default, metodos
@@ -38,7 +37,6 @@ Generics:
 
 class - reference type
 struct - value type
-
 
 <where>
 	http://csharp.2000things.com/2014/02/11/1030-requiring-generic-type-parameters-to-derive-from-a-specified-class/

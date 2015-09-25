@@ -1,6 +1,6 @@
 ﻿namespace Generics.Entity
 {
-    public class SkaterEntity : IEntity, IPersonEntity
+    public class SkaterEntity : IEntity, ISkaterEntity
     {
         public SkaterEntity()
         {

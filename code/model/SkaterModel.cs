@@ -1,6 +1,6 @@
 ﻿namespace Generics.Model
 {
-    public class SkaterModel : IModel, IPersonModel, ISkaterModel
+    public class SkaterModel : IModel, ISkaterModel
     {
         public int Id { get; set; }
 
