@@ -39,19 +39,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\DataAccessGenericsIEntity.cs" />
+    <Compile Include="Data\DataAccessNoGenerics.cs" />
     <Compile Include="Entity\IEntity.cs" />
+    <Compile Include="Entity\IEntityModify.cs" />
     <Compile Include="Entity\IPersonEntity.cs" />
+    <Compile Include="Entity\ISkaterEntity.cs" />
+    <Compile Include="Entity\ISoccerPlayerEntity.cs" />
     <Compile Include="Entity\PersonEntity.cs" />
     <Compile Include="Entity\SkaterEntity.cs" />
-    <Compile Include="ITranslator.cs" />
+    <Compile Include="Entity\SoccerPlayerEntity.cs" />
+    <Compile Include="Translator\ITranslator.cs" />
     <Compile Include="Model\IModel.cs" />
     <Compile Include="Model\IPersonModel.cs" />
     <Compile Include="Model\ISkaterModel.cs" />
+    <Compile Include="Model\ISoccerPlayerModel.cs" />
     <Compile Include="Model\PersonModel.cs" />
     <Compile Include="Model\SkaterModel.cs" />
-    <Compile Include="Translator.cs" />
+    <Compile Include="Model\SoccerPlayerModel.cs" />
+    <Compile Include="Translator\Translator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TranslatorMethod.cs" />
+    <Compile Include="Translator\TranslatorMethod.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

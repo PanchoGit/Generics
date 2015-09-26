@@ -1,4 +1,12 @@
 //------------------------------------------------------------------------------------//
+1. Ejemplo de un translator sin generics
+
+2. Ejemplo de un translator con generics
+
+3. Ejemplo de un DataAccess con generics con where para actualizar modify y registry
+	- test de una entidad sin interface IEntityModify
+	- test de una entidad con interface IEntityModify
+//------------------------------------------------------------------------------------//
 1. Generic name definition:
 
 // Non-generic class

@@ -1,6 +1,6 @@
 ﻿using Generics.Entity;
 
-namespace Generics
+namespace Generics.Translator
 {
     public class TranslatorMethod
     {

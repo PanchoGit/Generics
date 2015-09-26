@@ -1,6 +1,5 @@
-﻿using Generics;
-using Generics.Model;
-
+﻿using Generics.Model;
+using Generics.Translator;
 using Xunit;
 
 namespace UnitTest

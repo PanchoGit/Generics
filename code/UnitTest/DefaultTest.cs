@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using Generics.Model;
-
 using Xunit;
 
 namespace UnitTest

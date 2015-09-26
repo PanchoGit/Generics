@@ -1,6 +1,8 @@
-﻿namespace Generics.Entity
+﻿using System;
+
+namespace Generics.Entity
 {
-    public class SkaterEntity : IEntity, ISkaterEntity
+    public class SkaterEntity : IEntity, ISkaterEntity, IEntityModify
     {
         public SkaterEntity()
         {
@@ -14,5 +16,9 @@
         public string Stance { get; set; }
 
         public string Brand { get; set; }
+
+        public DateTime Modify { get; set; }
+
+        public DateTime Registry { get; set; }
     }
 }

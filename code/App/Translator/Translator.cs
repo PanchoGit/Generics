@@ -1,6 +1,6 @@
 ﻿using Generics.Model;
 
-namespace Generics
+namespace Generics.Translator
 {
     public class Translator : ITranslator<IPersonModel, ISkaterModel>
     {
