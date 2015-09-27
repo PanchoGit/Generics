@@ -7,11 +7,14 @@ namespace Generics.Data
     {
         public T Save(T entity)
         {
-            var entityModify = entity as IEntityModify;
-            if (entityModify != null)
+            var entityType = entity.GetType();
+
+            if (entityType.GetProperty("Modify") != null)
             {
-                entityModify.Modify = DateTime.Now;
+                var property = entityType.GetProperty("Modify");
+                property.SetValue(entity, DateTime.Now);
             }
+
             entity.Id = ProcessSave(entity);
             return entity;
         }

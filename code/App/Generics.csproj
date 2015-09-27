@@ -39,8 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\DataAccessGenericsIEntity.cs" />
-    <Compile Include="Data\DataAccessNoGenerics.cs" />
+    <Compile Include="Data\2.DataAccessGenericsIEntity.cs" />
+    <Compile Include="Data\1.DataAccessNoGenerics.cs" />
+    <Compile Include="Data\3.DataAccessGenericsIEntityModify.cs" />
+    <Compile Include="Entity\ElementType.cs" />
     <Compile Include="Entity\IEntity.cs" />
     <Compile Include="Entity\IEntityModify.cs" />
     <Compile Include="Entity\IPersonEntity.cs" />
@@ -49,6 +51,10 @@
     <Compile Include="Entity\PersonEntity.cs" />
     <Compile Include="Entity\SkaterEntity.cs" />
     <Compile Include="Entity\SoccerPlayerEntity.cs" />
+    <Compile Include="Factory\4.EntityFactorySimpleNew.cs" />
+    <Compile Include="Factory\5.EntityFactoryByElementDefault.cs" />
+    <Compile Include="Factory\6.FactoryStruct.cs" />
+    <Compile Include="Factory\7.FactoryExtended.cs" />
     <Compile Include="Translator\ITranslator.cs" />
     <Compile Include="Model\IModel.cs" />
     <Compile Include="Model\IPersonModel.cs" />
