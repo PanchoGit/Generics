@@ -7,9 +7,13 @@ namespace Generics.Translator
         public TModel Translate<T, TModel>(T entity) 
             where TModel : IEntity, new()
         {
-            var model = new TModel { Id = 0 };
+            return new TModel { Id = 0 };
+        }
 
-            return model;
+        public static TModel TranslateThis<T, TModel>(T entity)
+            where TModel : IEntity, new()
+        {
+            return new TModel { Id = 0 };
         }
     }
 }

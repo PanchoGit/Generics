@@ -1,15 +1,17 @@
 //------------------------------------------------------------------------------------//
 < Generic methods and delegates, and generic inheritance. >
-Generic Constraints (where)
-Constructor Constraint (new)
-Generic Methods
-Generic Static Method
+Generic Constraints (where) - 1, 2, 3
+Constructor Constraint (new) - 4, 5, 6
+Inheritance and Generics - 7
+Generic Methods - 8
+Generic Static Method - 9
 	Implementing a generic operator
 	operator+
 Generic Delegates
 	Generic event handling
 Generics and Reflection
 	Type's generic reflection members
+Generics Covariance Contravariance
 //------------------------------------------------------------------------------------//
 
 1. DataAccess no generic
@@ -19,8 +21,9 @@ Generics and Reflection
 5. EntityFactory generic + constructor publico + default
 6. Factory generic + struct
 7. Generic no es un Template como en C++ (no se puede heredar)
--8. Static Method
--9. Nested types
+-8. Method
+-9. Static Method
+-10. Nested types
 using System;
 class Outer<U> {
    static Outer(){ Console.WriteLine("Hello from Outer .cctor."); }
@@ -209,7 +212,15 @@ C:\Pancho\Projects\Invision\DEV\Server\Copy\Invision.Traffic.Copy.Validations\Cl
 //------------------------------------------------------------------------------------//
 Boxing and unboxing performance issue:
 
-However, there are two problems with Object-based solutions. The first issue is performance. When using value types, you have to box them in order to push and store them, and unbox the value types when popping them off the stack. Boxing and unboxing incurs a significant performance penalty in their own right, but it also increases the pressure on the managed heap, resulting in more garbage collections, which is not great for performance either. Even when using reference types instead of value types, there is still a performance penalty because you have to cast from an Object to the actual type you interact with and incur the casting cost:
+However, there are two problems with Object-based solutions. 
+The first issue is performance. 
+When using value types, you have to box them in order to push and store them, 
+and unbox the value types when popping them off the stack. 
+Boxing and unboxing incurs a significant performance penalty in their own right, 
+but it also increases the pressure on the managed heap, resulting in more garbage collections, 
+which is not great for performance either. Even when using reference types instead of value types, 
+there is still a performance penalty because you have to cast from an Object to the actual type you interact 
+with and incur the casting cost:
 
 > https://msdn.microsoft.com/en-us/library/ms379564(v=vs.80).aspx
 > http://www.codeguru.com/csharp/sample_chapter/article.php/c11673/C-Generics-Part-24-Constraints-Members-Operators.htm#page-3
