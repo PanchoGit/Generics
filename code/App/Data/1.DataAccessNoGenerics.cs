@@ -2,6 +2,7 @@
 
 namespace Generics.Data
 {
+    // Non-generic class
     public class DataAccessNoGenerics
     {
         public object Save(object entity)

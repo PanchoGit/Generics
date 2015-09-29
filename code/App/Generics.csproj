@@ -39,9 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\2.DataAccessGenerics-Constraint.cs" />
+    <Compile Include="Data\2.DataAccessGenerics-DerivationConstraint.cs" />
     <Compile Include="Data\1.DataAccessNoGenerics.cs" />
-    <Compile Include="Data\3.DataAccessGenerics-Constraint-IEntityModify.cs" />
     <Compile Include="Entity\ElementType.cs" />
     <Compile Include="Entity\IEntity.cs" />
     <Compile Include="Entity\IEntityModify.cs" />
@@ -51,10 +50,12 @@
     <Compile Include="Entity\PersonEntity.cs" />
     <Compile Include="Entity\SkaterEntity.cs" />
     <Compile Include="Entity\SoccerPlayerEntity.cs" />
-    <Compile Include="Factory\4.Factory-Constructor.cs" />
-    <Compile Include="Factory\5.Factory-Constructor-Default.cs" />
-    <Compile Include="Factory\6.Factory-Struct.cs" />
-    <Compile Include="Factory\7.Factory-Inheritance.cs" />
+    <Compile Include="Factory\3.Factory-ConstructorConstraint.cs" />
+    <Compile Include="Factory\4.Factory-ConstructorConstraint-Default.cs" />
+    <Compile Include="Factory\5.Factory-Struct.cs" />
+    <Compile Include="Factory\6.Factory-Inheritance.cs" />
+    <Compile Include="Operator\9.GenericsWithOperator.cs" />
+    <Compile Include="Translator\GlobalTranslator.cs" />
     <Compile Include="Translator\ITranslator.cs" />
     <Compile Include="Model\IModel.cs" />
     <Compile Include="Model\IPersonModel.cs" />
@@ -63,10 +64,10 @@
     <Compile Include="Model\PersonModel.cs" />
     <Compile Include="Model\SkaterModel.cs" />
     <Compile Include="Model\SoccerPlayerModel.cs" />
-    <Compile Include="Translator\9.Translator-StaticMethod.cs" />
+    <Compile Include="Translator\8.Translator-StaticMethod.cs" />
     <Compile Include="Translator\Translator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Translator\8.Translator-Method.cs" />
+    <Compile Include="Translator\7.Translator-Method.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

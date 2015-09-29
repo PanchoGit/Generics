@@ -4,24 +4,19 @@ using Generics.Entity;
 
 namespace Generics.Translator
 {
+    //Generic Class + Generic Static Method
     public class TranslatorStaticMethod<T>
     {
-        public static T OneMethod(T t)
-        {
-            return default(T);
-        }
-
+        //Generic Static Method
         public static T2 AnotherMethod<T2>(T t, T2 t2)
         {
             return t2;
         }
-    }
 
-    public class TranslatorStaticWithOperator<T, TK>
-    {
-        public static bool operator +(TranslatorStaticWithOperator<T, TK> value1, TK value2)
+        //Non-Generic Method
+        public static T OneMethod(T t)
         {
-            return true;
+            return default(T);
         }
     }
 

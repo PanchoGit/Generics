@@ -1,19 +1,19 @@
 //------------------------------------------------------------------------------------//
 < Generic methods and delegates, and generic inheritance. >
-Generic Constraints (where) - 1, 2, 3
-Constructor Constraint (new) - 4, 5, 6
-Inheritance and Generics - 7
-Generic Methods - 8
-Generic Static Method - 9
-	Implementing a generic operator
-	operator+
+Generic Constraints (where) - 1, 2, 3, 4
+	- derivation constraint - 2
+	- constructor constraint - 3, 4
+	- reference/value type constraint - 5
+Inheritance and Generics - 6
+Generic Methods - 7
+Generic Static Method - 8, 9
+Generic Nested types - 10
 Generic Delegates
 	Generic event handling
 Generics and Reflection
 	Type's generic reflection members
 Generics Covariance Contravariance
 //------------------------------------------------------------------------------------//
-
 1. DataAccess no generic
 2. DataAccess generic + where interface
 3. DataAccess generic + where interface (otro ejemplo)
@@ -21,22 +21,9 @@ Generics Covariance Contravariance
 5. EntityFactory generic + constructor publico + default
 6. Factory generic + struct
 7. Generic no es un Template como en C++ (no se puede heredar)
--8. Method
--9. Static Method
--10. Nested types
-using System;
-class Outer<U> {
-   static Outer(){ Console.WriteLine("Hello from Outer .cctor."); }
-   public class Inner<V> {
-      static Inner(){ Console.WriteLine("Hello from Inner .cctor."); }
-   }
-}
-class Program {
-   static void Main() {
-      Outer<string>.Inner<int> a = new Outer<string>.Inner<int>();
-      Outer<int>.Inner<int> b = new Outer<int>.Inner<int>();
-   }
-}
+8. Method
+9. Static Method
+10. Nested types
 //------------------------------------------------------------------------------------//
 2 - Generic name definition:
 
@@ -52,9 +39,6 @@ public void Bark()
 // Generic method
 public void Bury<T>(T thing)
 public static void Bury<T>(T thing)
-
-//Static Data Behaves in Generic Types
-PileOf<Dog>.NumInAllPiles
 
 5 - default
 Se usa con la finalidad cuando necesitamos setear o devolver un valor nulo o que significa que este vacio o a un valor inicial segun el tipo.

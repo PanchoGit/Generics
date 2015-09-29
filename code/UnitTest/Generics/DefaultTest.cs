@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Generics.Model;
 using Xunit;
 
-namespace UnitTest
+namespace UnitTest.Generics
 {
     public class DefaultTest
     {

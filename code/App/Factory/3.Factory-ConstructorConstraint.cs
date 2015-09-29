@@ -2,6 +2,7 @@
 
 namespace Generics.Factory
 {
+    //Constructor Constraint
     public class EntityFactory<T> where T : new()
     {
         public T CreateElement()
@@ -10,7 +11,8 @@ namespace Generics.Factory
         }
     }
 
-    public class SkateEntityFactory : EntityFactory<SkaterEntity> //SkaterEntity posee un constructor público
+    //SkaterEntity posee un constructor público
+    public class SkateEntityFactory : EntityFactory<SkaterEntity>
     {
         public SkaterEntity CreateSkater()
         {

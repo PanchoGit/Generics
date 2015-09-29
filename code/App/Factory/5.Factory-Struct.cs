@@ -3,6 +3,7 @@ using Generics.Entity;
 
 namespace Generics.Factory
 {
+    //Value Type Constraint
     public class FactoryStruct<T> where T : struct
     {
         public T Create()
@@ -27,8 +28,7 @@ namespace Generics.Factory
         }
     }
 
-    /*
-     * SkaterEntity no es un struct es un class que puede ser nullable
+    /* SkaterEntity es un reference
     public class SkateFactory : FactoryStruct<SkaterEntity>
     {
         public SkaterEntity CreateSkater()

@@ -62,9 +62,10 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
-    <Compile Include="DefaultTest.cs" />
+    <Compile Include="Generics\DefaultTest.cs" />
+    <Compile Include="Generics\GenericsOperatorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TranslatorTest.cs" />
+    <Compile Include="Generics\TranslatorTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

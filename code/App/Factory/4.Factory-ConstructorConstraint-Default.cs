@@ -2,6 +2,7 @@
 
 namespace Generics.Factory
 {
+    //default
     public class EntityFactoryByElement<T> where T : new()
     {
         public T CreateElement(ElementType elementType)

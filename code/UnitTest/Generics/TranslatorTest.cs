@@ -2,7 +2,7 @@
 using Generics.Translator;
 using Xunit;
 
-namespace UnitTest
+namespace UnitTest.Generics
 {
     public class TranslatorTest
     {
