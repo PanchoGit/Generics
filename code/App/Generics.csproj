@@ -55,7 +55,7 @@
     <Compile Include="Factory\5.Factory-Struct.cs" />
     <Compile Include="Factory\6.Factory-Inheritance.cs" />
     <Compile Include="Operator\9.GenericsWithOperator.cs" />
-    <Compile Include="Translator\GlobalTranslator.cs" />
+    <Compile Include="Translator\10. Translator-NestedGenerics.cs" />
     <Compile Include="Translator\ITranslator.cs" />
     <Compile Include="Model\IModel.cs" />
     <Compile Include="Model\IPersonModel.cs" />
