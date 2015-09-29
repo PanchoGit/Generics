@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EF3A90FA-A797-4F76-BC70-9CE4752267B5}</ProjectGuid>
+    <ProjectGuid>{676E62E6-FC02-408D-A3C8-3E831D968E7A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Generics</RootNamespace>
-    <AssemblyName>Generics</AssemblyName>
+    <RootNamespace>UnitTest</RootNamespace>
+    <AssemblyName>UnitTest</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,39 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\2.DataAccessGenerics-DerivationConstraint.cs" />
-    <Compile Include="Data\1.DataAccessNoGenerics.cs" />
-    <Compile Include="Entity\Animal.cs" />
-    <Compile Include="Entity\AnimalCat.cs" />
-    <Compile Include="Entity\AnimalPerson.cs" />
-    <Compile Include="Entity\ElementType.cs" />
-    <Compile Include="Entity\IEntity.cs" />
-    <Compile Include="Entity\IEntityModify.cs" />
-    <Compile Include="Entity\IPersonEntity.cs" />
-    <Compile Include="Entity\ISkaterEntity.cs" />
-    <Compile Include="Entity\ISoccerPlayerEntity.cs" />
-    <Compile Include="Entity\PersonEntity.cs" />
-    <Compile Include="Entity\SkaterEntity.cs" />
-    <Compile Include="Entity\SoccerPlayerEntity.cs" />
-    <Compile Include="Entity\Stone.cs" />
-    <Compile Include="Factory\3.Factory-ConstructorConstraint.cs" />
-    <Compile Include="Factory\4.Factory-ConstructorConstraint-Default.cs" />
-    <Compile Include="Factory\5.Factory-Struct.cs" />
-    <Compile Include="Factory\6.Factory-Inheritance.cs" />
-    <Compile Include="Operator\9.GenericsWithOperator.cs" />
-    <Compile Include="Translator\10.Translator-NestedGenerics.cs" />
-    <Compile Include="Model\IModel.cs" />
-    <Compile Include="Model\IPersonModel.cs" />
-    <Compile Include="Model\ISkaterModel.cs" />
-    <Compile Include="Model\ISoccerPlayerModel.cs" />
-    <Compile Include="Model\PersonModel.cs" />
-    <Compile Include="Model\SkaterModel.cs" />
-    <Compile Include="Model\SoccerPlayerModel.cs" />
-    <Compile Include="Translator\08.Translator-StaticMethod.cs" />
-    <Compile Include="Translator\12.Translator-Variant.cs" />
+    <Compile Include="Generics\DefaultTest.cs" />
+    <Compile Include="Generics\GenericsOperatorTest.cs" />
+    <Compile Include="Generics\TranslatorVariantTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Translator\07.Translator-Method.cs" />
-    <Compile Include="Translator\11.Translator-Delegate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\App\Generics.csproj">
+      <Project>{EF3A90FA-A797-4F76-BC70-9CE4752267B5}</Project>
+      <Name>Generics</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,11 +1,12 @@
 ﻿using Generics.Operator;
-using Xunit;
+
+using NUnit.Framework;
 
 namespace UnitTest.Generics
 {
     public class GenericsOperatorTest
     {
-        [Fact]
+        [Test]
         public void ShouldSuccessfullyOperator()
         {
             var value1 = new GenericsWithOperator<TipoNah>(new TipoNah("He-Man"));
@@ -14,7 +15,7 @@ namespace UnitTest.Generics
 
             var actual = value1 + value2;
 
-            Assert.Equal("He-Man.She-Ra", actual);
+            Assert.AreEqual("He-Man.She-Ra", actual);
         }
     }
 }

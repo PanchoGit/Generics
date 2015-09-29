@@ -1,36 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
 using Generics.Model;
-using Xunit;
+
+using NUnit.Framework;
 
 namespace UnitTest.Generics
 {
     public class DefaultTest
     {
-        [Fact]
+        [Test]
         public void ShouldSuccessfullyBeDefault()
         {
             var actualInt = default(int);
-            Assert.Equal(0, actualInt);
+            Assert.AreEqual(0, actualInt);
 
             var actualBool = default(bool);
-            Assert.Equal(false, actualBool);
+            Assert.AreEqual(false, actualBool);
 
             var actualDate = default(DateTime);
-            Assert.Equal(DateTime.MinValue, actualDate);
+            Assert.AreEqual(DateTime.MinValue, actualDate);
 
             var actualInNullable = default(int?);
-            Assert.Equal(null, actualInNullable);
+            Assert.AreEqual(null, actualInNullable);
 
 
             var actualObject = default(object);
-            Assert.Equal(null, actualObject);
+            Assert.AreEqual(null, actualObject);
 
             var actualClass = default(SkaterModel);
-            Assert.Equal(null, actualClass);
+            Assert.AreEqual(null, actualClass);
 
             var actualList = default(List<int>);
-            Assert.Equal(null, actualList);
+            Assert.AreEqual(null, actualList);
         }
     }
 }

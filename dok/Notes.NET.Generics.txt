@@ -8,11 +8,10 @@ Inheritance and Generics - 6
 Generic Methods - 7
 Generic Static Method - 8, 9
 Generic Nested types - 10
-Generic Delegates
-	Generic event handling
+Generic Delegates - 11
+Generics Covariance Contravariance
 Generics and Reflection
 	Type's generic reflection members
-Generics Covariance Contravariance
 //------------------------------------------------------------------------------------//
 1. DataAccess no generic
 2. DataAccess generic + where interface
@@ -208,3 +207,4 @@ with and incur the casting cost:
 
 > https://msdn.microsoft.com/en-us/library/ms379564(v=vs.80).aspx
 > http://www.codeguru.com/csharp/sample_chapter/article.php/c11673/C-Generics-Part-24-Constraints-Members-Operators.htm#page-3
+> http://weblogs.asp.net/dixin/understanding-csharp-covariance-and-contravariance-1-delegates
