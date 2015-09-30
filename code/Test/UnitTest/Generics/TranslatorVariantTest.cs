@@ -65,12 +65,13 @@ namespace UnitTest.Generics
             Assert.IsAssignableFrom<AnimalCat>(cat);
             Assert.IsNotAssignableFrom<Animal>(cat);
 
-            //NO
-            //AnimalCat[] otherCats = new Animal[2];
-            //NO
-            //otherCats[0] = new Animal();
-            //NO
-            //List<AnimalCat> otherCatsList = new List<Animal>();
+        #if NotCompilable
+            AnimalCat[] otherCats = new Animal[2];
+
+            therCats[0] = new Animal();
+
+            List<AnimalCat> otherCatsList = new List<Animal>();
+        #endif
         }
     }
 }

@@ -1,9 +1,9 @@
 ﻿namespace Generics.Factory
 {
-    // NO
-    //public class GenericInheritance<T> : T {}
+#if NotCompile
+    public class GenericInheritance<T> : T {}
+#endif
     
-    // SI
     public class FactoryStructExtended<T> : FactoryStruct<T> where T : struct
     {
     }
@@ -12,6 +12,7 @@
     {
     }
 
-    // NO
-    //public class Inception<T1, T2> where T1 : T2 where T2 : T1
+#if NotCompile
+    public class Inception<T1, T2> where T1 : T2 where T2 : T1
+#endif
 }

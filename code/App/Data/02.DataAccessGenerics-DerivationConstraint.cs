@@ -8,12 +8,10 @@ namespace Generics.Data
     {
         public T Save(T entity)
         {
-            var entityType = entity.GetType();
-
-            if (entityType.GetProperty("Modify") != null)
+            var entityModify = entity as IEntityModify;
+            if (entityModify != null)
             {
-                var property = entityType.GetProperty("Modify");
-                property.SetValue(entity, DateTime.Now);
+                entityModify.Modify = DateTime.Now;
             }
 
             entity.Id = ProcessSave(entity);
@@ -22,7 +20,6 @@ namespace Generics.Data
 
         private int ProcessSave(T entity)
         {
-            // process entity
             return 1;
         }
     }
@@ -39,7 +36,6 @@ namespace Generics.Data
 
         private int ProcessSave(T entity)
         {
-            // process entity
             return 1;
         }
     }

@@ -40,8 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\2.DataAccessGenerics-DerivationConstraint.cs" />
-    <Compile Include="Data\1.DataAccessNoGenerics.cs" />
+    <Compile Include="Data\02.DataAccessGenerics-DerivationConstraint.cs" />
+    <Compile Include="Data\01.DataAccessNoGenerics.cs" />
     <Compile Include="Entity\Animal.cs" />
     <Compile Include="Entity\AnimalCat.cs" />
     <Compile Include="Entity\AnimalPerson.cs" />
@@ -55,11 +55,11 @@
     <Compile Include="Entity\SkaterEntity.cs" />
     <Compile Include="Entity\SoccerPlayerEntity.cs" />
     <Compile Include="Entity\Stone.cs" />
-    <Compile Include="Factory\3.Factory-ConstructorConstraint.cs" />
-    <Compile Include="Factory\4.Factory-ConstructorConstraint-Default.cs" />
-    <Compile Include="Factory\5.Factory-Struct.cs" />
-    <Compile Include="Factory\6.Factory-Inheritance.cs" />
-    <Compile Include="Operator\9.GenericsWithOperator.cs" />
+    <Compile Include="Factory\03.Factory-ConstructorConstraint.cs" />
+    <Compile Include="Factory\04.Factory-ConstructorConstraint-Default.cs" />
+    <Compile Include="Factory\05.Factory-Struct.cs" />
+    <Compile Include="Factory\06.Factory-Inheritance.cs" />
+    <Compile Include="Operator\09.GenericsWithOperator.cs" />
     <Compile Include="Translator\10.Translator-NestedGenerics.cs" />
     <Compile Include="Model\IModel.cs" />
     <Compile Include="Model\IPersonModel.cs" />

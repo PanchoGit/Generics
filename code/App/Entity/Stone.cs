@@ -1,6 +1,6 @@
 ﻿namespace Generics.Entity
 {
-    public class Stone : IEntity
+    public class Stone
     {
         public int Id { get; set; }
 

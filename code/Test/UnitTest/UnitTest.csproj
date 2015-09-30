@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Generics\DataAccessTest.cs" />
     <Compile Include="Generics\DefaultTest.cs" />
     <Compile Include="Generics\GenericsOperatorTest.cs" />
+    <Compile Include="Generics\TranslatorGenericVariant.cs" />
     <Compile Include="Generics\TranslatorVariantTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

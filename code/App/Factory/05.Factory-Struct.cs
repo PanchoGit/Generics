@@ -1,5 +1,4 @@
 ﻿using System;
-using Generics.Entity;
 
 namespace Generics.Factory
 {
@@ -28,12 +27,13 @@ namespace Generics.Factory
         }
     }
 
-    /* SkaterEntity es un reference
+#if NotCompile //SkaterEntity es un reference
     public class SkateFactory : FactoryStruct<SkaterEntity>
     {
         public SkaterEntity CreateSkater()
         {
             return Create();
         }
-    }*/
+    }
+#endif
 }

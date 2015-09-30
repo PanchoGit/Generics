@@ -6,15 +6,13 @@ namespace Generics.Translator
     public class TranslatorMethod
     {
         //Generic Method
-        public TModel Translate<T, TModel>(T entity) 
-            where TModel : IEntity, new()
+        public TModel Translate<T, TModel>(T entity) where TModel : IEntity, new()
         {
             return new TModel { Id = 0 };
         }
 
         //Generic Static Method
-        public static TModel TranslateThis<T, TModel>(T entity)
-            where TModel : IEntity, new()
+        public static TModel TranslateThis<T, TModel>(T entity) where TModel : IEntity, new()
         {
             return new TModel { Id = 0 };
         }

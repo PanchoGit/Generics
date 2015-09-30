@@ -1,4 +1,5 @@
 ﻿using System;
+using Generics.Entity;
 
 namespace Generics.Data
 {
@@ -6,6 +7,25 @@ namespace Generics.Data
     public class DataAccessNoGenerics
     {
         public object Save(object entity)
+        {
+            var entityModify = entity as IEntityModify;
+            if (entityModify != null)
+            {
+                entityModify.Modify = DateTime.Now;
+            }
+            
+            var id = ProcessSave(entity);
+
+            var entityId = entity as IEntity;
+            if (entityId != null)
+            {
+                entityId.Id = id;
+            }
+
+            return entity;
+        }
+
+        public object SaveWithReflection(object entity)
         {
             var entityType = entity.GetType();
 
@@ -28,7 +48,6 @@ namespace Generics.Data
 
         private int ProcessSave(object entity)
         {
-            // process entity
             return 1;
         }
     }
